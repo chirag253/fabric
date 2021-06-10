@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.discover.DiscoverFragment">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivProductImage"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/product_1" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:fillViewport="true"
+        android:paddingTop="285dp"
+        android:paddingBottom="36dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:cardCornerRadius="16dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="24dp"
+                android:padding="16dp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvBrandName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed"
+                    android:letterSpacing="0.02"
+                    android:lineSpacingMultiplier="1.2"
+                    android:text="Air Bouncer"
+                    android:textColor="@color/textTertiary"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="@id/tvRating"
+                    app:layout_constraintEnd_toStartOf="@id/tvRating"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvRating"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_rating_view"
+                    android:drawableStart="@drawable/ic_star_rate_24"
+                    android:drawablePadding="2dp"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:gravity="center"
+                    android:paddingStart="4dp"
+                    android:paddingTop="2dp"
+                    android:paddingEnd="5dp"
+                    android:paddingBottom="2dp"
+                    android:text="4.5 Ratings"
+                    android:textColor="@color/textPrimaryDark"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvProductName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:letterSpacing="0.02"
+                    android:lineSpacingMultiplier="1.15"
+                    android:text="Air Bouncer 05 Light Blue and White Running Shoes for boys"
+                    android:textColor="@color/textSecondary"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvRating" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvOfferedPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:letterSpacing="0.04"
+                    android:text="$45.99"
+                    android:textColor="@color/textPrimary"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvProductName" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvActualPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:letterSpacing="0.02"
+                    android:text="$45.99"
+                    android:textColor="@color/textTertiary"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="@id/tvOfferedPrice"
+                    app:layout_constraintStart_toEndOf="@id/tvOfferedPrice"
+                    app:layout_constraintTop_toTopOf="@id/tvOfferedPrice" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvOfferText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:gravity="center"
+                    android:text="(35% OFF)"
+                    android:textColor="@color/purple_500"
+                    android:textSize="13sp"
+                    app:layout_constraintBottom_toBottomOf="@id/tvActualPrice"
+                    app:layout_constraintStart_toEndOf="@id/tvActualPrice"
+                    app:layout_constraintTop_toTopOf="@id/tvActualPrice" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvVariantTitle"
+                    style="@style/DetailsDividerTitle"
+                    android:text="Product Variants"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvOfferedPrice" />
+
+                <View
+                    android:id="@+id/variantDivider"
+                    style="@style/DetailsDivider"
+                    app:layout_constraintBottom_toBottomOf="@id/tvVariantTitle"
+                    app:layout_constraintStart_toEndOf="@id/tvVariantTitle"
+                    app:layout_constraintTop_toTopOf="@id/tvVariantTitle" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/ilColorSelector"
+                    style="@style/TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="0dp"
+                    android:layout_marginTop="28dp"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintEnd_toStartOf="@id/ilSizeSelector"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/variantDivider">
+
+                    <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                        android:id="@+id/tvColorSelector"
+                        style="@style/TextInputEditTextStyle"
+                        android:completionThreshold="0"
+                        android:cursorVisible="false"
+                        android:ellipsize="end"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:hint="Select Color"
+                        android:inputType="none" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/ilSizeSelector"
+                    style="@style/TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="0dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="28dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/ilColorSelector"
+                    app:layout_constraintTop_toBottomOf="@id/variantDivider">
+
+                    <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                        android:id="@+id/tvSizeSelector"
+                        style="@style/TextInputEditTextStyle"
+                        android:completionThreshold="0"
+                        android:cursorVisible="false"
+                        android:ellipsize="end"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:hint="Select Size"
+                        android:inputType="none" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvDescriptionTitle"
+                    style="@style/DetailsDividerTitle"
+                    android:text="Product Description"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/ilSizeSelector" />
+
+                <View
+                    android:id="@+id/descriptionDivider"
+                    style="@style/DetailsDivider"
+                    app:layout_constraintBottom_toBottomOf="@id/tvDescriptionTitle"
+                    app:layout_constraintStart_toEndOf="@id/tvDescriptionTitle"
+                    app:layout_constraintTop_toTopOf="@id/tvDescriptionTitle" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:letterSpacing="0.03"
+                    android:lineSpacingMultiplier="1.3"
+                    android:text="Driven by a relentless pursuit of innovation as well as decades of accumulating sports science expertise, we cater for all, from elite professional athletes and teams to any individual who wants to make sport part of their lives."
+                    android:textColor="@color/textSecondary"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvDescriptionTitle" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvSpecificationTitle"
+                    style="@style/DetailsDividerTitle"
+                    android:text="Product Specification"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvDescription" />
+
+                <View
+                    android:id="@+id/specificationDivider"
+                    style="@style/DetailsDivider"
+                    app:layout_constraintBottom_toBottomOf="@id/tvSpecificationTitle"
+                    app:layout_constraintStart_toEndOf="@id/tvSpecificationTitle"
+                    app:layout_constraintTop_toTopOf="@id/tvSpecificationTitle" />
+
+                <LinearLayout
+                    android:id="@+id/specificationContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="vertical"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvSpecificationTitle" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/btnWishlist"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/bg_round_wishlist_btn"
+        android:padding="6dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_wishlist_border_24" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

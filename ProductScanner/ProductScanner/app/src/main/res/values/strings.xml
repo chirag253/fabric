@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">ProductScanner</string>
+    <string name="title_discover">Discover</string>
+    <string name="title_explore">Explore</string>
+    <string name="title_cart">Cart</string>
+    <string name="title_offer">Offer</string>
+    <string name="title_profile">Profile</string>
+</resources>

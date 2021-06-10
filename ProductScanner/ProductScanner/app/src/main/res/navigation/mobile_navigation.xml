@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_discover">
+    <fragment
+        android:id="@+id/navigation_discover"
+        android:name="com.parveendala.productscanner.ui.discover.DiscoverFragment"
+        android:label="@string/title_discover"
+        tools:layout="@layout/fragment_discover" />
+    <fragment
+        android:id="@+id/navigation_explore"
+        android:name="com.parveendala.productscanner.ui.empty.EmptyFragment"
+        android:label="@string/title_explore"
+        tools:layout="@layout/fragment_empty" />
+    <fragment
+        android:id="@+id/navigation_cart"
+        android:name="com.parveendala.productscanner.ui.empty.EmptyFragment"
+        android:label="@string/title_cart"
+        tools:layout="@layout/fragment_empty" />
+    <fragment
+        android:id="@+id/navigation_offer"
+        android:name="com.parveendala.productscanner.ui.empty.EmptyFragment"
+        android:label="@string/title_offer"
+        tools:layout="@layout/fragment_empty" />
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.parveendala.productscanner.ui.empty.EmptyFragment"
+        android:label="@string/title_profile"
+        tools:layout="@layout/fragment_empty" />
+</navigation>
